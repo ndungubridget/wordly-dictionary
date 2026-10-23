@@ -1,0 +1,182 @@
+body {
+ background-color: #f4f6fb;
+    font-family: Arial, sans-serif;
+    color: #20243a;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Main heading */
+h1 {
+    color: #252b55;
+    text-align: center;
+    font-size: 36px;
+}
+
+p {
+    text-align: center;
+    font-size: 16px;
+    color: #606780;
+}
+
+/* Theme button */
+#theme-button {
+    display: block;
+    margin: 15px auto;
+}
+
+/* Search form */
+form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+/* Text input */
+input {
+    padding: 12px;
+    width: 280px;
+    border: 1px solid #ccd0df;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+/* Buttons */
+button {
+    padding: 12px 20px;
+    background-color: #252b55;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    background-color: #424b83;
+}
+
+/* Dictionary results */
+#dictionary-result {
+    background-color: white;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+#dictionary-result h2 {
+    color: #252b55;
+    text-align: left;
+}
+
+#dictionary-result p {
+    text-align: left;
+    line-height: 1.6;
+}
+
+#pronunciation-audio {
+    max-width: 100%;
+}
+
+/* Similar words */
+#synonyms-list li {
+    margin-bottom: 8px;
+    color: #424b83;
+}
+
+/* Saved words */
+#favorites-section {
+    background-color: white;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+#favorites-section h2 {
+    color: #252b55;
+}
+
+#favorites-list li {
+    margin-bottom: 8px;
+}
+
+/* Error and status message */
+#error-message {
+    color: #c62828;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Dark theme */
+body.dark-theme {
+    background-color: #181a2b;
+    color: #f4f6fb;
+}
+
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3 {
+    color: #c6caff;
+}
+
+body.dark-theme p {
+    color: #d0d3e5;
+}
+
+body.dark-theme #dictionary-result,
+body.dark-theme #favorites-section {
+    background-color: #292c42;
+    color: #f4f6fb;
+}
+
+body.dark-theme #synonyms-list li {
+    color: #c6caff;
+}
+
+body.dark-theme input {
+    background-color: #292c42;
+    color: #f4f6fb;
+    border-color: #555a78;
+}
+
+body.dark-theme input::placeholder {
+    color: #c0c4d8;
+}
+
+/* Smooth theme change */
+body,
+#dictionary-result,
+#favorites-section,
+input {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Mobile layout */
+@media (max-width: 500px) {
+    body {
+        padding: 12px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    input,
+    form button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #dictionary-result,
+    #favorites-section {
+        padding: 18px;
+    }
+}
