@@ -38,37 +38,37 @@ searchForm.addEventListener("submit", function(event) {
 
     fetch(url)
         .then(function(response) {
-            if (!response.ok) {
-                throw new Error("Word not found.");
+          if (!response.ok) {
+              throw new Error("Word not found.");
             }
 
-            return response.json();
+         return response.json();
         })
         .then(function(data) {
             /* Check that the response has a definition */
-            if (
+         if (
                 !data ||
-                data.length === 0 ||
-                !data[0].meanings ||
-                data[0].meanings.length === 0
+             data.length === 0 ||
+            !data[0].meanings ||
+            data[0].meanings.length === 0
             ) {
-                throw new Error("No definition available.");
+             throw new Error("No definition available.");
             }
 
-            const entry = data[0];
-            const meaning = entry.meanings[0];
+        const entry = data[0];
+        const meaning = entry.meanings[0];
 
-            if (
-                !meaning.definitions ||
-                meaning.definitions.length === 0
-            ) {
-                throw new Error("No definition available.");
+         if (
+             !meaning.definitions ||
+             meaning.definitions.length === 0
+        ) {
+              throw new Error("No definition available.");
             }
 
             const wordDefinition = meaning.definitions[0];
 
-            /* Display the word and its meaning */
-            wordTitle.textContent = entry.word;
+         /* Display the word and its meaning */
+         wordTitle.textContent = entry.word;
 
             partOfSpeech.textContent =
                 "Part of speech: " + meaning.partOfSpeech;
@@ -77,16 +77,16 @@ searchForm.addEventListener("submit", function(event) {
                 "Definition: " + wordDefinition.definition;
 
             /* Display an example if available */
-            if (wordDefinition.example) {
-                example.textContent =
-                    "Example: " + wordDefinition.example;
+        if (wordDefinition.example) {
+              example.textContent =
+                  "Example: " + wordDefinition.example;
             } else {
                 example.textContent = "No example available.";
             }
 
-            /* Display pronunciation and audio */
+           /* Display pronunciation and audio */
             pronunciation.textContent =
-                "Pronunciation not available.";
+             "Pronunciation not available.";
 
             audioPlayer.removeAttribute("src");
             audioPlayer.hidden = true;
@@ -132,7 +132,7 @@ searchForm.addEventListener("submit", function(event) {
                 }
             }
 
-            errorMessage.textContent = "";
+           errorMessage.textContent = "";
         })
         .catch(function(error) {
             errorMessage.textContent =
@@ -170,5 +170,5 @@ saveWordButton.addEventListener("click", function() {
 
 /* Change the page theme */
 themeButton.addEventListener("click", function() {
-    document.body.classList.toggle("dark-theme");
+ document.body.classList.toggle("dark-theme");
 });
