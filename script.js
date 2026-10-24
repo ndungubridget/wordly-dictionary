@@ -1,23 +1,23 @@
 /* ‌Get ‌the ‌elements from HTML */
-const searchForm = document.getElementById("search-form");
-console.log("Wordly JavaScript is running");
-const wordInput = document.getElementById("word-input");
-const errorMessage = document.getElementById("error-message");
+ const searchForm = document.getElementById("search-form");
+ console.log("Wordly JavaScript is running");
+ const wordInput = document.getElementById("word-input");
+ const errorMessage = document.getElementById("error-message");
 
-const wordTitle = document.getElementById("word-title");
-const partOfSpeech = document.getElementById("part-of-speech");
-const definition = document.getElementById("definition");
-const example = document.getElementById("example");
-const pronunciation = document.getElementById("pronunciation");
-const audioPlayer = document.getElementById("pronunciation-audio");
-const synonymsList = document.getElementById("synonyms-list");
+ const wordTitle = document.getElementById("word-title");
+ const partOfSpeech = document.getElementById("part-of-speech");
+ const definition = document.getElementById("definition");
+ const example = document.getElementById("example");
+ const pronunciation = document.getElementById("pronunciation");
+ const audioPlayer = document.getElementById("pronunciation-audio");
+ const synonymsList = document.getElementById("synonyms-list");
 
-const saveWordButton = document.getElementById("save-word-button");
-const favoritesList = document.getElementById("favorites-list");
-const themeButton = document.getElementById("theme-button");
+ const saveWordButton = document.getElementById("save-word-button");
+ const favoritesList = document.getElementById("favorites-list");
+  const themeButton = document.getElementById("theme-button");
 
 /* Store saved words */
-const savedWords = [];
+ const savedWords = [];
 
 /* Search for a word */
 searchForm.addEventListener("submit", function(event) {
@@ -32,7 +32,7 @@ searchForm.addEventListener("submit", function(event) {
 
     errorMessage.textContent = "Searching...";
 
-    const url =
+     const  url =
         "https://api.dictionaryapi.dev/api/v2/entries/en/" +
         encodeURIComponent(word);
 
